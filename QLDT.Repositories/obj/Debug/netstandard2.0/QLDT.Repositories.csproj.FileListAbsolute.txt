@@ -1,0 +1,12 @@
+D:\Angular\AspNetCore\QLDT\QLDT.Repositories\bin\Debug\netstandard2.0\QLDT.Repositories.deps.json
+D:\Angular\AspNetCore\QLDT\QLDT.Repositories\bin\Debug\netstandard2.0\QLDT.Repositories.dll
+D:\Angular\AspNetCore\QLDT\QLDT.Repositories\bin\Debug\netstandard2.0\QLDT.Repositories.pdb
+D:\Angular\AspNetCore\QLDT\QLDT.Repositories\bin\Debug\netstandard2.0\QLDT.Core.dll
+D:\Angular\AspNetCore\QLDT\QLDT.Repositories\bin\Debug\netstandard2.0\QLDT.Core.pdb
+D:\Angular\AspNetCore\QLDT\QLDT.Repositories\obj\Debug\netstandard2.0\QLDT.Repositories.csprojAssemblyReference.cache
+D:\Angular\AspNetCore\QLDT\QLDT.Repositories\obj\Debug\netstandard2.0\QLDT.Repositories.AssemblyInfoInputs.cache
+D:\Angular\AspNetCore\QLDT\QLDT.Repositories\obj\Debug\netstandard2.0\QLDT.Repositories.AssemblyInfo.cs
+D:\Angular\AspNetCore\QLDT\QLDT.Repositories\obj\Debug\netstandard2.0\QLDT.Repositories.csproj.CoreCompileInputs.cache
+D:\Angular\AspNetCore\QLDT\QLDT.Repositories\obj\Debug\netstandard2.0\QLDT.Repositories.csproj.CopyComplete
+D:\Angular\AspNetCore\QLDT\QLDT.Repositories\obj\Debug\netstandard2.0\QLDT.Repositories.dll
+D:\Angular\AspNetCore\QLDT\QLDT.Repositories\obj\Debug\netstandard2.0\QLDT.Repositories.pdb

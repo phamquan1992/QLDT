@@ -1,0 +1,9 @@
+D:\Angular\AspNetCore\QLDT\QLDT.Core\bin\Debug\netstandard2.0\QLDT.Core.deps.json
+D:\Angular\AspNetCore\QLDT\QLDT.Core\bin\Debug\netstandard2.0\QLDT.Core.dll
+D:\Angular\AspNetCore\QLDT\QLDT.Core\bin\Debug\netstandard2.0\QLDT.Core.pdb
+D:\Angular\AspNetCore\QLDT\QLDT.Core\obj\Debug\netstandard2.0\QLDT.Core.csprojAssemblyReference.cache
+D:\Angular\AspNetCore\QLDT\QLDT.Core\obj\Debug\netstandard2.0\QLDT.Core.AssemblyInfoInputs.cache
+D:\Angular\AspNetCore\QLDT\QLDT.Core\obj\Debug\netstandard2.0\QLDT.Core.AssemblyInfo.cs
+D:\Angular\AspNetCore\QLDT\QLDT.Core\obj\Debug\netstandard2.0\QLDT.Core.csproj.CoreCompileInputs.cache
+D:\Angular\AspNetCore\QLDT\QLDT.Core\obj\Debug\netstandard2.0\QLDT.Core.dll
+D:\Angular\AspNetCore\QLDT\QLDT.Core\obj\Debug\netstandard2.0\QLDT.Core.pdb

@@ -1,0 +1,14 @@
+D:\Angular\AspNetCore\QLDT\QLDT.Service\bin\Debug\netstandard2.0\QLDT.Service.deps.json
+D:\Angular\AspNetCore\QLDT\QLDT.Service\bin\Debug\netstandard2.0\QLDT.Service.dll
+D:\Angular\AspNetCore\QLDT\QLDT.Service\bin\Debug\netstandard2.0\QLDT.Service.pdb
+D:\Angular\AspNetCore\QLDT\QLDT.Service\bin\Debug\netstandard2.0\QLDT.Core.dll
+D:\Angular\AspNetCore\QLDT\QLDT.Service\bin\Debug\netstandard2.0\QLDT.Repositories.dll
+D:\Angular\AspNetCore\QLDT\QLDT.Service\bin\Debug\netstandard2.0\QLDT.Core.pdb
+D:\Angular\AspNetCore\QLDT\QLDT.Service\bin\Debug\netstandard2.0\QLDT.Repositories.pdb
+D:\Angular\AspNetCore\QLDT\QLDT.Service\obj\Debug\netstandard2.0\QLDT.Service.csprojAssemblyReference.cache
+D:\Angular\AspNetCore\QLDT\QLDT.Service\obj\Debug\netstandard2.0\QLDT.Service.AssemblyInfoInputs.cache
+D:\Angular\AspNetCore\QLDT\QLDT.Service\obj\Debug\netstandard2.0\QLDT.Service.AssemblyInfo.cs
+D:\Angular\AspNetCore\QLDT\QLDT.Service\obj\Debug\netstandard2.0\QLDT.Service.csproj.CoreCompileInputs.cache
+D:\Angular\AspNetCore\QLDT\QLDT.Service\obj\Debug\netstandard2.0\QLDT.Service.csproj.CopyComplete
+D:\Angular\AspNetCore\QLDT\QLDT.Service\obj\Debug\netstandard2.0\QLDT.Service.dll
+D:\Angular\AspNetCore\QLDT\QLDT.Service\obj\Debug\netstandard2.0\QLDT.Service.pdb
