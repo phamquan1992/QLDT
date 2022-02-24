@@ -29,9 +29,17 @@ namespace QLDT
             #region Repository
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IDmchucvuRepository, DmchucvuRepository>();
+            services.AddScoped<IDmXaRepository, DmXaRepository>();
+            services.AddScoped<IDmHuyenRepository, DmHuyenRepository>();
+            services.AddScoped<IDmdvqlRepository, DmdvqlRepository>();
+            services.AddScoped<IDmtinhRepository, DmtinhRepository>();
             #endregion
             #region Service
             services.AddScoped<IDmchucvuService, DmchucvuService>();
+            services.AddScoped<IDmXaService, DmXaService>();
+            services.AddScoped<IDmHuyenService, DmHuyenService>();
+            services.AddScoped<IDmDVQLService, DmDVQLService>();
+            services.AddScoped<IDmtinhService, DmtinhService>();
             #endregion
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory

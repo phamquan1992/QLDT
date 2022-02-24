@@ -10,12 +10,20 @@ namespace QLDT.Repositories.Repository
     public class UnitOfWork : IUnitOfWork
     {
         public IDmchucvuRepository danhmucRepository { get; }
+        public IDmHuyenRepository dmHuyenRepository { get; }
+        public IDmdvqlRepository dmdvqlRepository { get; }
+        public IDmtinhRepository dmtinhRepository { get; }
+        public IDmXaRepository dmXaRepository { get; }
         private readonly ISessionFactory _sessionFactory;
         private readonly ITransaction _transaction;
         public ISession Session { get; private set; }
         public UnitOfWork(
             ISessionFactory sessionFactory,
-            IDmchucvuRepository danhmucRepository
+            IDmchucvuRepository danhmucRepository,
+            IDmXaRepository dmXaRepository,
+            IDmHuyenRepository dmHuyenRepository,
+            IDmdvqlRepository dmdvqlRepository,
+            IDmtinhRepository dmtinhRepository
             )
         {
             this._sessionFactory = sessionFactory;
@@ -26,6 +34,10 @@ namespace QLDT.Repositories.Repository
             this._transaction = Session.BeginTransaction(IsolationLevel.ReadCommitted);
 
             this.danhmucRepository = danhmucRepository;
+            this.dmXaRepository = dmXaRepository;
+            this.dmHuyenRepository = dmHuyenRepository;
+            this.dmdvqlRepository = dmdvqlRepository;
+            this.dmtinhRepository = dmtinhRepository;
         }
         public void Dispose()
         {

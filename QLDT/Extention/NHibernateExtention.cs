@@ -19,6 +19,10 @@ namespace QLDT.Extention
                .Dialect<NHibernate.Dialect.Oracle10gDialect>().ShowSql())
                .Cache(c => c.UseQueryCache().UseSecondLevelCache().ProviderClass<HashtableCacheProvider>())
                .Mappings(m => m.FluentMappings.AddFromAssemblyOf<DM_CHUCVUMapping>())
+               .Mappings(m => m.FluentMappings.AddFromAssemblyOf<DM_XAMapping>())
+               .Mappings(m => m.FluentMappings.AddFromAssemblyOf<DM_HUYENMapping>())
+               .Mappings(m => m.FluentMappings.AddFromAssemblyOf<DM_DVQLMapping>())
+               .Mappings(m => m.FluentMappings.AddFromAssemblyOf<DM_TINHMapping>())
                .ExposeConfiguration(cf => new SchemaUpdate(cf).Execute(false, false));
 
             var sessionFactory = configuration.BuildSessionFactory();
