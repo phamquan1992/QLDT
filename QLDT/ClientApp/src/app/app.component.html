@@ -23,7 +23,7 @@
             </svg>
           </button>
           <div id="userMenu"
-            class="bg-white rounded shadow-md mt-2 absolute top-0 right-0 min-w-full overflow-auto z-30 invisible">
+            class="bg-white rounded shadow-md mt-10 absolute top-0 right-0 min-w-full overflow-auto z-30 invisible">
             <ul class="list-reset">
               <li><a href="#" class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">My
                   account</a></li>
@@ -55,8 +55,8 @@
     </div>
 
 
-    <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white z-20" id="nav-content">
-      <ul class="list-reset lg:flex flex-1 items-center px-4 md:px-0">
+    <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white z-20" id="nav_content">
+      <ul class="list-reset lg:flex flex-1 items-center px-4 md:px-0" id="mn_content">
         <li class="mr-6 my-2 md:my-0">
           <a href="#"
             class="block py-1 md:py-3 pl-1 align-middle text-pink-600 no-underline hover:text-gray-900 border-b-2 border-orange-600 hover:border-orange-600">
@@ -66,7 +66,30 @@
         <li class="mr-6 my-2 md:my-0">
           <a href="#"
             class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-pink-500">
-            <i class="fas fa-tasks fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">Tasks</span>
+            <i class="fas fa-tasks fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">Danh mục</span>
+            <ul class="hidden mt-[14px] -ml-1 bg-white rounded shadow-md absolute z-30 sub_menu">
+              <li class="relative"><a href="#"
+                  class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline text-sm">Danh
+                  mục dùng chung
+                  <ul class="hidden left-full top-0 bg-white rounded shadow-md absolute z-30 sub_menu">
+                    <li class="relative"><a href="#"
+                        class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline text-sm w-52">Danh
+                        mục tỉnh</a></li>
+                    <li class="relative"><a href="#"
+                        class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline text-sm w-52">Danh
+                        mục tỉnh</a></li>
+                    <li class="relative"><a href="#"
+                        class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline text-sm w-52">Danh
+                        mục tỉnh</a></li>
+                  </ul>
+                </a></li>
+              <li><a href="#"
+                  class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline text-sm">Danh
+                  mục dùng riêng</a></li>
+              <li><a href="#"
+                  class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline text-sm">Danh
+                  mục huyện</a></li>
+            </ul>
           </a>
         </li>
         <li class="mr-6 my-2 md:my-0">
