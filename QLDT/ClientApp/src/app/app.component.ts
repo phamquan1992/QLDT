@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ClientApp';
+  istoogle: boolean = false;
+  showToogle() {
+    this.istoogle = !this.istoogle;
+  }
 }

@@ -1,1 +1,4 @@
-#mn_content a:hover>ul { display: block;}
+#mn_content li:hover>ul { display: block}
+#mn_content li{
+    position: relative;
+}

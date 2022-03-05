@@ -42,7 +42,7 @@
 
 
         <div class="block lg:hidden pr-4">
-          <button id="nav-toggle"
+          <button id="nav-toggle" (click)="showToogle()"
             class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-teal-500 appearance-none focus:outline-none">
             <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <title>Menu</title>
@@ -55,42 +55,58 @@
     </div>
 
 
-    <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white z-20" id="nav_content">
+    <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto mt-2 lg:mt-0 bg-white z-20" id="nav_content"
+      [ngClass]="istoogle?'':'hidden'">
       <ul class="list-reset lg:flex flex-1 items-center px-4 md:px-0" id="mn_content">
         <li class="mr-6 my-2 md:my-0">
           <a href="#"
             class="block py-1 md:py-3 pl-1 align-middle text-pink-600 no-underline hover:text-gray-900 border-b-2 border-orange-600 hover:border-orange-600">
-            <i class="fas fa-home fa-fw mr-3 text-pink-600"></i><span class="pb-1 md:pb-0 text-sm">Home</span>
+            <i class="fas fa-home fa-fw mr-3 text-pink-600"></i><span class="pb-1 md:pb-0 text-sm">Trang chủ</span>
           </a>
         </li>
         <li class="mr-6 my-2 md:my-0">
           <a href="#"
             class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-pink-500">
-            <i class="fas fa-tasks fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">Danh mục</span>
-            <ul class="hidden mt-[14px] -ml-1 bg-white rounded shadow-md absolute z-30 sub_menu">
-              <li class="relative"><a href="#"
-                  class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline text-sm">Danh
-                  mục dùng chung
-                  <ul class="hidden left-full top-0 bg-white rounded shadow-md absolute z-30 sub_menu">
-                    <li class="relative"><a href="#"
-                        class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline text-sm w-52">Danh
-                        mục tỉnh</a></li>
-                    <li class="relative"><a href="#"
-                        class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline text-sm w-52">Danh
-                        mục tỉnh</a></li>
-                    <li class="relative"><a href="#"
-                        class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline text-sm w-52">Danh
-                        mục tỉnh</a></li>
-                  </ul>
-                </a></li>
-              <li><a href="#"
-                  class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline text-sm">Danh
-                  mục dùng riêng</a></li>
-              <li><a href="#"
-                  class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline text-sm">Danh
-                  mục huyện</a></li>
-            </ul>
-          </a>
+            <i class="fas fa-tasks fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">Danh mục</span></a>
+          <ul class="hidden bg-white rounded shadow-md lg:absolute  sub_menu w-full md:w-52 mr-6">
+            <li class="w-full md:w-52"><a href="#"
+                class="px-4 py-2 block text-gray-900 hover:bg-gray-400 hover:text-white no-underline hover:no-underline text-sm">Danh
+                mục dùng chung</a>
+              <ul
+                class="hidden left-full top-0 bg-white rounded shadow-md lg:absolute  sub_menu w-full md:w-52 mr-6">
+                <li class="w-full"><a href="#"
+                    class="px-4 py-2 block text-gray-900 hover:bg-gray-400 hover:text-white no-underline hover:no-underline text-sm">Danh
+                    mục tỉnh</a></li>
+                <li class="w-full"><a href="#"
+                    class="px-4 py-2 block text-gray-900 hover:bg-gray-400 hover:text-white no-underline hover:no-underline text-sm">Danh
+                    mục tỉnh</a></li>
+                <li class="w-full"><a href="#"
+                    class="px-4 py-2 block text-gray-900 hover:bg-gray-400 hover:text-white no-underline hover:no-underline text-sm">Danh
+                    mục tỉnh</a></li>
+              </ul>
+            </li>
+            <li><a href="#"
+                class="px-4 py-2 block text-gray-900 hover:bg-gray-400 hover:text-white no-underline hover:no-underline text-sm">Danh
+                mục dùng riêng</a>
+              <ul
+                class="hidden left-full top-0 bg-white rounded shadow-md lg:absolute  sub_menu w-full md:w-52 mr-6">
+                <li class="w-full"><a href="#"
+                    class="px-4 py-2 block text-gray-900 hover:bg-gray-400 hover:text-white no-underline hover:no-underline text-sm">Danh
+                    mục tỉnh</a></li>
+                <li class="w-full"><a href="#"
+                    class="px-4 py-2 block text-gray-900 hover:bg-gray-400 hover:text-white no-underline hover:no-underline text-sm">Danh
+                    mục tỉnh</a></li>
+                <li class="w-full"><a href="#"
+                    class="px-4 py-2 block text-gray-900 hover:bg-gray-400 hover:text-white no-underline hover:no-underline text-sm">Danh
+                    mục tỉnh</a></li>
+              </ul>
+            </li>
+            <li><a href="#"
+                class="px-4 py-2 block text-gray-900 hover:bg-gray-400 hover:text-white no-underline hover:no-underline text-sm">Danh
+                mục huyện
+              </a></li>
+          </ul>
+
         </li>
         <li class="mr-6 my-2 md:my-0">
           <a href="#"
