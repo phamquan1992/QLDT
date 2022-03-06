@@ -21,7 +21,7 @@ namespace QLDT.Controllers
         [HttpGet]
         public IEnumerable<DM_DVQL> Get()
         {
-            return _IDmDVQLService.GetAll();
+            return _IDmDVQLService.GetAll().OrderBy(t=>t.ma_dvql);
         }
     }
 }

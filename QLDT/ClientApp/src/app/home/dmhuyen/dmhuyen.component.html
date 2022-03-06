@@ -1,0 +1,17 @@
+<table class="w-full flex flex-row flex-no-wrap sm:bg-white rounded-lg overflow-hidden sm:shadow-lg my-5">
+    <thead class="text-white">
+        <tr class="bg-blue-500 flex flex-col flex-no wrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0" *ngFor="let dm of listdmhuyen|async">
+            <th class="p-3 text-left text-sm  whitespace-nowrap">Mã huyện</th>
+            <th class="p-3 text-left text-sm whitespace-nowrap">Tên huyện</th>
+            <th class="p-3 text-left text-sm whitespace-nowrap">Mã tỉnh</th>
+        </tr>
+       
+    </thead>
+    <tbody class="flex-1 sm:flex-none">
+        <tr *ngFor="let dm of listdmhuyen|async" class="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
+            <td class="border-grey-light border hover:bg-gray-100 p-3">{{dm.dmhuyenpk.ma_huyen}}</td>
+            <td class="border-grey-light border hover:bg-gray-100 p-3 truncate">{{dm.ten_huyen}}</td>
+            <td class="border-grey-light border hover:bg-gray-100 p-3 text-red-400 hover:text-red-600 hover:font-medium cursor-pointer">{{dm.dmhuyenpk.ma_tinh}}</td>
+        </tr>
+    </tbody>
+</table>
