@@ -1,0 +1,17 @@
+<table class="w-full flex flex-row flex-no-wrap sm:bg-white rounded-lg overflow-hidden sm:shadow-lg my-5">
+    <thead class="text-white">
+        <tr class="bg-blue-500 flex flex-col flex-no wrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0" *ngFor="let dm of listdmdvql|async">
+            <th class="p-3 text-left text-sm  whitespace-nowrap">MA_DVQL</th>
+            <th class="p-3 text-left text-sm whitespace-nowrap">Tên DVQL</th>
+            <th class="p-3 text-left text-sm whitespace-nowrap">Mã cấp trên</th>
+        </tr>
+       
+    </thead>
+    <tbody class="flex-1 sm:flex-none">
+        <tr *ngFor="let dm of listdmdvql|async" class="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
+            <td class="border-grey-light border hover:bg-gray-100 p-3">{{dm.ma_dvql}}</td>
+            <td class="border-grey-light border hover:bg-gray-100 p-3 truncate">{{dm.ten_dvql}}</td>
+            <td class="border-grey-light border hover:bg-gray-100 p-3 text-red-400 hover:text-red-600 hover:font-medium cursor-pointer">{{dm.ma_captren}}</td>
+        </tr>
+    </tbody>
+</table>
