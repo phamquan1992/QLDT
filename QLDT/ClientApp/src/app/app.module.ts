@@ -7,10 +7,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import * as fromDVQL from 'src/app/states/reducers/dmdvql.reducer';
 import * as fromHuyen from 'src/app/states/reducers/dmhuyen.reducer';
+import * as fromBaocao from 'src/app/states/reducers/dmbaocao.reducer';
 import { DmdvqlEffect } from './states/effects/dmdvql.effect';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { DmhuyenEffect } from './states/effects/dmhuyen.effect';
+import { Dmbaocaoeffect } from './states/effects/dmbaocao.effect';
 
 @NgModule({
   declarations: [
@@ -20,8 +22,8 @@ import { DmhuyenEffect } from './states/effects/dmhuyen.effect';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({ dm_dvql: fromDVQL.dvqlReducer, dm_huyen: fromHuyen.huyenReducer }),
-    EffectsModule.forRoot([DmdvqlEffect, DmhuyenEffect]),
+    StoreModule.forRoot({ dm_dvql: fromDVQL.dvqlReducer, dm_huyen: fromHuyen.huyenReducer, dm_baocao: fromBaocao.baocaoReducer }),
+    EffectsModule.forRoot([DmdvqlEffect, DmhuyenEffect, Dmbaocaoeffect]),
     HttpClientModule
   ],
   providers: [],
