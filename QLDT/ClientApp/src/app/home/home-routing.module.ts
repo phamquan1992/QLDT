@@ -7,6 +7,7 @@ import { DmdvqlComponent } from './dmdvql/dmdvql.component';
 import { DmhopdongtcComponent } from './dmhopdongtc/dmhopdongtc.component';
 import { DmhuyenComponent } from './dmhuyen/dmhuyen.component';
 import { HomeComponent } from './home.component';
+import { ModalCTComponent } from './modal-ct/modal-ct.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,7 @@ const routes: Routes = [
       { path: 'header', component:  DmbcheaderComponent},
       { path: 'chi-tieu', component: DmchitieuComponent },
       { path: 'hop-dong', component: DmhopdongtcComponent },
+      { path: 'mo-dal', component: ModalCTComponent },
     ]
   },
 

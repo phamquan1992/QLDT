@@ -11,6 +11,7 @@ namespace QLDT.Repositories.IRepository
         IDmHuyenRepository dmHuyenRepository { get; }
         IDmdvqlRepository dmdvqlRepository { get; }
         IDmtinhRepository dmtinhRepository { get; }
+        IDM_BAOCAORepository dM_BAOCAORepository { get; }
         void Commit();
         void Rollback();
     }

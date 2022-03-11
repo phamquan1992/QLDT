@@ -9,6 +9,8 @@ import { DmbaocaoComponent } from './dmbaocao/dmbaocao.component';
 import { DmbcheaderComponent } from './dmbcheader/dmbcheader.component';
 import { DmchitieuComponent } from './dmchitieu/dmchitieu.component';
 import { DmhopdongtcComponent } from './dmhopdongtc/dmhopdongtc.component';
+import { ModalCTComponent } from './modal-ct/modal-ct.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,10 +22,12 @@ import { DmhopdongtcComponent } from './dmhopdongtc/dmhopdongtc.component';
     DmbcheaderComponent,
     DmchitieuComponent,
     DmhopdongtcComponent,
+    ModalCTComponent,
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    FormsModule
   ]
 })
 export class HomeModule { }

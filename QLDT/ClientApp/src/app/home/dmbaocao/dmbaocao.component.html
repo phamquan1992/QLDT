@@ -18,7 +18,16 @@
                         Tên báo cáo</th>
                     <th
                         class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r whitespace-nowrap font-semibold text-center bg-slate-50 text-slate-500 border-slate-200">
-                        Trạng thái</th>
+                        Trạng thái
+                    </th>
+                    <th
+                        class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r whitespace-nowrap font-semibold text-center bg-slate-50 text-slate-500 border-slate-200">
+                        Số hiệu
+                    </th>
+                    <th
+                        class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r whitespace-nowrap font-semibold text-center bg-slate-50 text-slate-500 border-slate-200">
+                        Ban hành
+                    </th>
                 </tr>
 
             </thead>
@@ -30,14 +39,91 @@
                     <td class="border-t-0 px-6 align-middle border-l-0 border-r text-xs whitespace-nowrap py-2">
                         {{dm.noidung}}</td>
                     <td class="border-t-0 px-6 align-middle border-l-0 border-r text-xs whitespace-nowrap py-2">
-                        {{dm.trang_thai}}</td>
+                        <!-- {{dm.trang_thai}} -->
+                        <div [ngSwitch]="dm.trang_thai">
+                            <div *ngSwitchCase="0">Chưa kích hoạt</div>
+                            <div *ngSwitchCase="1">Đã kích hoạt</div>
+                            <div *ngSwitchDefault>Chưa kích hoạt kích hoạt</div>
+                        </div>
+                    </td>
+                    <td class="border-t-0 px-6 align-middle border-l-0 border-r text-xs whitespace-nowrap py-2">
+                        {{dm.sohieu}}</td>
+                    <td class="border-t-0 px-6 align-middle border-l-0 border-r text-xs whitespace-nowrap py-2">
+                        {{dm.banhanh}}</td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <div class="w-64 mx-auto mt-2 mb-2">
-        <button class="bg-green-700 py-2 px-2 mr-1 rounded-md text-white font-bold text-[13px] font-['Roboto']">Thêm mới</button>
-        <button class="bg-blue-700 py-2 px-2 rounded-md text-white font-bold text-[13px] font-['Roboto']">Sửa</button>
-        <button class="bg-red-700 py-2 px-2 ml-1 rounded-md text-white font-bold text-[13px] font-['Roboto']">Xóa</button>
+    <div class="w-80 mx-auto mt-2 mb-2">
+        <button (click)="addmew_bc()"
+            class="bg-green-700 py-2 px-2 mr-1 rounded-md text-white font-bold text-[13px] font-['Roboto'] min-w-[100px]"><i
+                class="fas fa-plus mr-1"></i>Thêm mới</button>
+        <button (click)="update_bc()"
+            class="bg-blue-700 py-2 px-2 rounded-md text-white font-bold text-[13px] font-['Roboto'] min-w-[100px]"><i
+                class="fas fa-pen mr-1"></i>Sửa</button>
+        <button (click)="toggleModal()"
+            class="bg-red-700 py-2 px-2 ml-1 rounded-md text-white font-bold text-[13px] font-['Roboto'] min-w-[100px]"><i
+                class="fas fa-trash mr-1"></i>Xóa</button>
     </div>
 </div>
+
+<div *ngIf="showModal"
+    class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex">
+    <div class="relative w-auto my-6 mx-auto max-w-3xl">
+        <!--content-->
+        <div
+            class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+            <!--header-->
+            <div class="flex items-start justify-between py-2 px-5 border-b border-solid border-gray-200 rounded-t">
+                <h3 class="text-2xl font-semibold">
+                    {{HederModal_BC}}
+                </h3>
+                <button
+                    class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                    (click)="toggleModal()">
+                    <span
+                        class="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                        x
+                    </span>
+                </button>
+            </div>
+            <!--body-->
+            <div class="relative p-6 flex-auto">
+                <div class="mb-3 pt-0">
+                    <label for="txtmabaocao">Mã báo cáo</label>
+                    <input type="text" name="txtmabaocao" placeholder="Mã báo cáo" [(ngModel)]="obj_select.ma_baocao"
+                        class="px-2 py-1 placeholder-gray-300 text-gray-600 relative bg-white rounded text-sm shadow outline-none focus:outline-none focus:shadow-outline w-full border border-solid border-gray-300" />
+                    <label for="txttenbaocao">Tên báo cáo</label>
+                    <input type="text" name="txttenbaocao" placeholder="Tên báo cáo" [(ngModel)]="obj_select.noidung"
+                        class="px-2 py-1 placeholder-gray-300 text-gray-600 relative bg-white rounded text-sm shadow outline-none focus:outline-none focus:shadow-outline w-full border border-solid border-gray-300" />
+                    <label for="txtSohieu">Số hiệu</label>
+                    <input type="text" name="txtSohieu" placeholder="Số hiệu" [(ngModel)]="obj_select.sohieu"
+                        class="px-2 py-1 placeholder-gray-300 text-gray-600 relative bg-white rounded text-sm shadow outline-none focus:outline-none focus:shadow-outline w-full border border-solid border-gray-300" />
+                    <label for="txtBanHanh">Ban hành</label>
+                    <input type="text" name="txtBanHanh" placeholder="Ban hành" [(ngModel)]="obj_select.banhanh"
+                        class="px-2 py-1 placeholder-gray-300 text-gray-600 relative bg-white rounded text-sm shadow outline-none focus:outline-none focus:shadow-outline w-full border border-solid border-gray-300" />
+                    <label class="inline-flex items-center">
+                        <input
+                            class="text-indigo-500 w-4 h-4 mr-2 focus:ring-indigo-400 focus:ring-opacity-25 border border-gray-300 rounded"
+                            type="checkbox" [(ngModel)]="obj_select.trang_thai"/>
+                        Trạng thái
+                    </label>
+                </div>
+            </div>
+            <!--footer-->
+            <div class="flex items-center justify-end py-2 px-5 border-t border-solid border-gray-200 rounded-b">
+                <button
+                    class="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-xs outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button" (click)="toggleModal()">
+                    <i class="fas fa-times mr-1"></i>Đóng
+                </button>
+                <button
+                    class="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-xs px-6 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button" (click)="toggleModal()">
+                    <i class="fas fa-check mr-1"></i>Lưu
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="showModal" class="opacity-25 fixed inset-0 z-40 bg-black"></div>
