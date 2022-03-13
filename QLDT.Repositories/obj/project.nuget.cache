@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fmbOBBHi6DfblrkfnGvHuxGQCcl17zZn7jDp82zyChbfo0ri10ENs40RNdXr8gMhPQIcv0CERP5KhHb0Xde4fA==",
+  "dgSpecHash": "Le6KuJKbqSYVFc+qrh/ko6Dh1hk8ZzuCOanpcMk4OwJRHiQ39k3NDx3GJF3GhJHPGmpDSGvLFh2CezXeORBKrQ==",
   "success": true,
-  "projectFilePath": "D:\\Angular\\AspNetCore\\QLDT\\QLDT.Repositories\\QLDT.Repositories.csproj",
+  "projectFilePath": "D:\\AngularCore\\QLDT\\QLDT.Repositories\\QLDT.Repositories.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\phamq\\.nuget\\packages\\antlr3.runtime\\3.5.1\\antlr3.runtime.3.5.1.nupkg.sha512",
     "C:\\Users\\phamq\\.nuget\\packages\\fluentnhibernate\\3.1.0\\fluentnhibernate.3.1.0.nupkg.sha512",

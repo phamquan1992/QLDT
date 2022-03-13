@@ -10,7 +10,7 @@ import { DmbcheaderComponent } from './dmbcheader/dmbcheader.component';
 import { DmchitieuComponent } from './dmchitieu/dmchitieu.component';
 import { DmhopdongtcComponent } from './dmhopdongtc/dmhopdongtc.component';
 import { ModalCTComponent } from './modal-ct/modal-ct.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -27,7 +27,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class HomeModule { }

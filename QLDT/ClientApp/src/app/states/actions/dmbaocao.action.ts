@@ -7,7 +7,13 @@ export enum dmbaocaoActionType {
     Fecth_dmbaocao_failure = "[DMBAOCAO] Fecth dmbaocao failure",
     Get_obj_dmbaocao = "[DMBAOCAO] Get dmbaocao",
     Get_obj_dmbaocao_success = "[DMBAOCAO] Get dmbaocao success",
-    Get_obj_dmbaocao_failure = "[DMBAOCAO] Get dmbaocao failure"
+    Get_obj_dmbaocao_failure = "[DMBAOCAO] Get dmbaocao failure",
+    Post_dmbaocao = "[DMBAOCAO] Post dmbaocao",
+    Post_dmbaocao_success = "[DMBAOCAO] Post dmbaocao success",
+    Post_dmbaocao_failure = "[DMBAOCAO] Post dmbaocao failure",
+    Put_dmbaocao = "[DMBAOCAO] Put dmbaocao",
+    Put_dmbaocao_success = "[DMBAOCAO] Put dmbaocao success",
+    Put_dmbaocao_failure = "[DMBAOCAO] Put dmbaocao failure",
 }
 export const FECTH_DMBAOCAO = createAction(
     dmbaocaoActionType.Fecth_dmbaocao
@@ -30,3 +36,26 @@ export const GET_OBJ_DMBAOCAO_SUCCESS = createAction(
 export const GET_OBJ_DMBAOCAO_FAILURE = createAction(
     dmbaocaoActionType.Get_obj_dmbaocao_failure
 )
+export const POST_DMBAOCAO = createAction(
+    dmbaocaoActionType.Post_dmbaocao,
+    props<{ obj_dmbaocao_add: dm_baocao }>()
+)
+export const POST_DMBAOCAO_SUCCESS = createAction(
+    dmbaocaoActionType.Post_dmbaocao_success,
+    props<{ result: string }>()
+)
+export const POST_DMBAOCAO_FAILURE = createAction(
+    dmbaocaoActionType.Post_dmbaocao_failure
+)
+export const PUT_DMBAOCAO = createAction(
+    dmbaocaoActionType.Put_dmbaocao,
+    props<{ obj_dmbaocao_update: dm_baocao }>()
+)
+export const PUT_DMBAOCAO_SUCCESS = createAction(
+    dmbaocaoActionType.Put_dmbaocao_success,
+    props<{ result_update: string }>()
+)
+export const PUT_DMBAOCAO_FAILURE = createAction(
+    dmbaocaoActionType.Put_dmbaocao_failure
+)
+

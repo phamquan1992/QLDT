@@ -17,7 +17,43 @@ namespace QLDT.Service.ServiceImp
         }
         public IQueryable<DM_BAOCAO> GetAll()
         {
-            return _unitOfWork.dM_BAOCAORepository.GetAll().OrderBy(t=>t.ma_baocao);
+            return _unitOfWork.dM_BAOCAORepository.GetAll().OrderBy(t => t.ma_baocao);
+        }
+        public bool CreateNew(DM_BAOCAO obj)
+        {
+            try
+            {
+                _unitOfWork.dM_BAOCAORepository.Add(obj);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        public bool Update(DM_BAOCAO obj)
+        {
+            try
+            {
+                _unitOfWork.dM_BAOCAORepository.Update(obj);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        public bool Delete(DM_BAOCAO obj)
+        {
+            try
+            {
+                _unitOfWork.dM_BAOCAORepository.Delete(obj);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }

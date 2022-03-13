@@ -5,7 +5,7 @@ import { StoreModule } from '@ngrx/store';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import * as fromDVQL from 'src/app/states/reducers/dmdvql.reducer';
 import * as fromHuyen from 'src/app/states/reducers/dmhuyen.reducer';
 import * as fromBaocao from 'src/app/states/reducers/dmbaocao.reducer';
@@ -26,7 +26,8 @@ import { Dmbaocaoeffect } from './states/effects/dmbaocao.effect';
     StoreModule.forRoot({ dm_dvql: fromDVQL.dvqlReducer, dm_huyen: fromHuyen.huyenReducer, dm_baocao: fromBaocao.baocaoReducer }),
     EffectsModule.forRoot([DmdvqlEffect, DmhuyenEffect, Dmbaocaoeffect]),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

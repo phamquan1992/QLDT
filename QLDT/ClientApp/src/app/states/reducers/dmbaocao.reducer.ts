@@ -6,12 +6,14 @@ import { AppState } from "../app.state";
 export interface DmbaocaoState {
     list: dm_baocao[],
     loadding: boolean,
-    obj_baocao: dm_baocao
+    obj_baocao: dm_baocao,
+    result: string;
 }
 export const initalState = {
     list: [] as dm_baocao[],
     loadding: false,
-    obj_baocao: null as unknown as dm_baocao
+    obj_baocao: null as unknown as dm_baocao,
+    result: ''
 }
 export const DmbaocaoReducer = createReducer(
     initalState,
@@ -52,6 +54,44 @@ export const DmbaocaoReducer = createReducer(
             ...state,
             loadding: false
         }
+    )),
+    on(DmbaocaoAction.POST_DMBAOCAO, state => (
+        {
+            ...state,
+            loadding: true
+        }
+    )),
+    on(DmbaocaoAction.POST_DMBAOCAO_SUCCESS, (state, { result }) => (
+        {
+            ...state,
+            loadding: false,
+            result: result
+        }
+    )),
+    on(DmbaocaoAction.POST_DMBAOCAO_FAILURE, state => (
+        {
+            ...state,
+            loadding: false
+        }
+    )),
+    on(DmbaocaoAction.PUT_DMBAOCAO, state => (
+        {
+            ...state,
+            loadding: true
+        }
+    )),
+    on(DmbaocaoAction.PUT_DMBAOCAO_SUCCESS, (state, { result_update }) => (
+        {
+            ...state,
+            loadding: false,
+            result: result_update
+        }
+    )),
+    on(DmbaocaoAction.PUT_DMBAOCAO_FAILURE, state => (
+        {
+            ...state,
+            loadding: false
+        }
     ))
 )
 export function baocaoReducer(state: DmbaocaoState | undefined, action: Action) {
@@ -65,4 +105,8 @@ export const getListDmBaocao = createSelector(
 export const getObjBaocao = createSelector(
     getbaocaofeatureState,
     (state: DmbaocaoState) => state.obj_baocao
+)
+export const postDmbaocaoresult = createSelector(
+    getbaocaofeatureState,
+    (state: DmbaocaoState) => state.result
 )

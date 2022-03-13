@@ -9,5 +9,8 @@ namespace QLDT.Service.IService
     public interface IDM_BAOCAOService
     {
         IQueryable<DM_BAOCAO> GetAll();
+        bool CreateNew(DM_BAOCAO obj);
+        bool Update(DM_BAOCAO obj);
+        bool Delete(DM_BAOCAO obj);
     }
 }
