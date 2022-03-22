@@ -55,5 +55,9 @@ namespace QLDT.Service.ServiceImp
                 return false;
             }
         }
+        public IQueryable<DM_BAOCAO> GetFilter(int take, int skip)
+        {
+            return _unitOfWork.dM_BAOCAORepository.GetAll().Skip(skip).Take(take);
+        }
     }
 }

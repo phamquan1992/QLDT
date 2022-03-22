@@ -12,5 +12,6 @@ namespace QLDT.Service.IService
         bool CreateNew(DM_BAOCAO obj);
         bool Update(DM_BAOCAO obj);
         bool Delete(DM_BAOCAO obj);
+        IQueryable<DM_BAOCAO> GetFilter(int take, int skip);
     }
 }
