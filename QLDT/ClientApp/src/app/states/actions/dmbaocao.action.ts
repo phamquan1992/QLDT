@@ -14,6 +14,9 @@ export enum dmbaocaoActionType {
     Put_dmbaocao = "[DMBAOCAO] Put dmbaocao",
     Put_dmbaocao_success = "[DMBAOCAO] Put dmbaocao success",
     Put_dmbaocao_failure = "[DMBAOCAO] Put dmbaocao failure",
+    Delete_dmbaocao = "[DMBAOCAO] Delete dmbaocao",
+    Delete_dmbaocao_success = "[DMBAOCAO] Delete dmbaocao success",
+    Delete_dmbaocao_failure = "[DMBAOCAO] Delete dmbaocao failure"
 }
 export const FECTH_DMBAOCAO = createAction(
     dmbaocaoActionType.Fecth_dmbaocao
@@ -58,4 +61,14 @@ export const PUT_DMBAOCAO_SUCCESS = createAction(
 export const PUT_DMBAOCAO_FAILURE = createAction(
     dmbaocaoActionType.Put_dmbaocao_failure
 )
-
+export const DELETE_DMBAOCAO = createAction(
+    dmbaocaoActionType.Delete_dmbaocao,
+    props<{ id: string }>()
+)
+export const DELETE_DMBAOCAO_SUCCESS = createAction(
+    dmbaocaoActionType.Delete_dmbaocao_success,
+    props<{ result_del: string }>()
+)
+export const DELETE_DMBAOCAO_FAILURE = createAction(
+    dmbaocaoActionType.Delete_dmbaocao_failure
+)

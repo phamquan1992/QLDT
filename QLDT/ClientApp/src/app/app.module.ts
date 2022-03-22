@@ -14,6 +14,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { DmhuyenEffect } from './states/effects/dmhuyen.effect';
 import { Dmbaocaoeffect } from './states/effects/dmbaocao.effect';
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +31,10 @@ import { Dmbaocaoeffect } from './states/effects/dmbaocao.effect';
     EffectsModule.forRoot([DmdvqlEffect, DmhuyenEffect, Dmbaocaoeffect]),
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule ,
+    CommonModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

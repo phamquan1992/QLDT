@@ -33,6 +33,8 @@ namespace QLDT.Controllers
         [Route("Create")]
         public bool Create([FromBody] DM_BAOCAO dmbaocao)
         {
+            dmbaocao.ngay_tao = DateTime.Now;
+            dmbaocao.nguoi_tao = "";
             var result = _IDM_BAOCAOService.CreateNew(dmbaocao);
             return result;
         }
@@ -48,7 +50,7 @@ namespace QLDT.Controllers
             var result = _IDM_BAOCAOService.Update(obj);
             return result;
         }
-        [HttpPost]
+        [HttpDelete]
         [Route("Delete/{id}")]
         public bool Delete(int id)
         {

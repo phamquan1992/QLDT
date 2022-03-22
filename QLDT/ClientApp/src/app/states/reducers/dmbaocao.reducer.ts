@@ -92,6 +92,25 @@ export const DmbaocaoReducer = createReducer(
             ...state,
             loadding: false
         }
+    )),
+    on(DmbaocaoAction.DELETE_DMBAOCAO, state => (
+        {
+            ...state,
+            loadding: true
+        }
+    )),
+    on(DmbaocaoAction.DELETE_DMBAOCAO_SUCCESS, (state, { result_del }) => (
+        {
+            ...state,
+            loadding: false,
+            result: result_del
+        }
+    )),
+    on(DmbaocaoAction.DELETE_DMBAOCAO_FAILURE, state => (
+        {
+            ...state,
+            loadding: false
+        }
     ))
 )
 export function baocaoReducer(state: DmbaocaoState | undefined, action: Action) {

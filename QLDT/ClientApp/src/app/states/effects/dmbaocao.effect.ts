@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { Actions, createEffect, ofType } from "@ngrx/effects";
 import { catchError, map, mergeMap, of, switchMap, tap } from "rxjs";
 import { DataService } from "src/app/services/data.service";
-import { FECTH_DMBAOCAO, FECTH_DMBAOCAO_FAILURE, FECTH_DMBAOCAO_SUCCESS, GET_OBJ_DMBAOCAO, GET_OBJ_DMBAOCAO_FAILURE, GET_OBJ_DMBAOCAO_SUCCESS, POST_DMBAOCAO, POST_DMBAOCAO_FAILURE, POST_DMBAOCAO_SUCCESS, PUT_DMBAOCAO, PUT_DMBAOCAO_FAILURE, PUT_DMBAOCAO_SUCCESS } from "../actions/dmbaocao.action";
+import { DELETE_DMBAOCAO, DELETE_DMBAOCAO_FAILURE, DELETE_DMBAOCAO_SUCCESS, FECTH_DMBAOCAO, FECTH_DMBAOCAO_FAILURE, FECTH_DMBAOCAO_SUCCESS, GET_OBJ_DMBAOCAO, GET_OBJ_DMBAOCAO_FAILURE, GET_OBJ_DMBAOCAO_SUCCESS, POST_DMBAOCAO, POST_DMBAOCAO_FAILURE, POST_DMBAOCAO_SUCCESS, PUT_DMBAOCAO, PUT_DMBAOCAO_FAILURE, PUT_DMBAOCAO_SUCCESS } from "../actions/dmbaocao.action";
 
 @Injectable()
 export class Dmbaocaoeffect {
@@ -45,5 +45,15 @@ export class Dmbaocaoeffect {
                     of(PUT_DMBAOCAO_FAILURE())
                 )
             ))
+    ))
+    deletedmbaocao$ = createEffect(() => this.action$.pipe(
+        ofType(DELETE_DMBAOCAO),
+        mergeMap(({ id }) => this.dataSrv.delete('dmbaocao/Delete', id).pipe(
+            map((result_del: any) => DELETE_DMBAOCAO_SUCCESS({ result_del })),
+            tap(),
+            catchError(error =>
+                of(DELETE_DMBAOCAO_FAILURE())
+            )
+        ))
     ))
 }
