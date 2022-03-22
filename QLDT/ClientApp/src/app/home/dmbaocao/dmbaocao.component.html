@@ -34,12 +34,16 @@
             </thead>
             <tbody class="flex-1 sm:flex-none">
                 <tr *ngFor="let dm of listbaocao|async" class="hover:bg-blue-500 hover:text-white"
-                    [class.bg-blue-500]="rowSelect===dm.id" [class.text-white]="rowSelect===dm.id" (click)="selectRow(dm)">
-                    <td class="border-t-0 px-6 align-middle border-l-0 border-r border-b text-xs whitespace-nowrap py-2">
+                    [class.bg-blue-500]="rowSelect===dm.id" [class.text-white]="rowSelect===dm.id"
+                    (click)="selectRow(dm)">
+                    <td
+                        class="border-t-0 px-6 align-middle border-l-0 border-r border-b text-xs whitespace-nowrap py-2">
                         {{dm.ma_baocao}}</td>
-                    <td class="border-t-0 px-6 align-middle border-l-0 border-r border-b text-xs whitespace-nowrap py-2">
+                    <td
+                        class="border-t-0 px-6 align-middle border-l-0 border-r border-b text-xs whitespace-nowrap py-2">
                         {{dm.noidung}}</td>
-                    <td class="border-t-0 px-6 align-middle border-l-0 border-r border-b text-xs whitespace-nowrap py-2">
+                    <td
+                        class="border-t-0 px-6 align-middle border-l-0 border-r border-b text-xs whitespace-nowrap py-2">
                         <!-- {{dm.trang_thai}} -->
                         <div [ngSwitch]="dm.trang_thai">
                             <div *ngSwitchCase="0">Chưa kích hoạt</div>
@@ -47,9 +51,11 @@
                             <div *ngSwitchDefault>Chưa kích hoạt kích hoạt</div>
                         </div>
                     </td>
-                    <td class="border-t-0 px-6 align-middle border-l-0 border-r border-b text-xs whitespace-nowrap py-2">
+                    <td
+                        class="border-t-0 px-6 align-middle border-l-0 border-r border-b text-xs whitespace-nowrap py-2">
                         {{dm.sohieu}}</td>
-                    <td class="border-t-0 px-6 align-middle border-l-0 border-r border-b text-xs whitespace-nowrap py-2">
+                    <td
+                        class="border-t-0 px-6 align-middle border-l-0 border-r border-b text-xs whitespace-nowrap py-2">
                         {{dm.banhanh}}</td>
                 </tr>
             </tbody>
@@ -105,7 +111,7 @@
                     <input type="text" placeholder="Ban hành" formControlName="banhanh"
                         class="px-2 py-1 placeholder-gray-300 text-gray-600 relative bg-white rounded text-sm shadow outline-none focus:outline-none focus:shadow-outline w-full border border-solid border-gray-300" />
                     <label class="inline-flex items-center">
-                        <input [checked]="checkObj"  (change)="checkObj = !checkObj" 
+                        <input [checked]="checkObj" (change)="checkObj = !checkObj"
                             class="text-indigo-500 w-4 h-4 mr-2 focus:ring-indigo-400 focus:ring-opacity-25 border border-gray-300 rounded"
                             type="checkbox" />
                         Trạng thái

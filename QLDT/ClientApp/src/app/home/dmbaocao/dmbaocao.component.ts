@@ -24,6 +24,7 @@ export class DmbaocaoComponent implements OnInit {
   loading$!: Observable<Boolean>;
   checkObj = false;
   ketqua!: string;
+  disabledIp = false;
   constructor(private _fb: FormBuilder, private store: Store<AppState>, private toastr: ToastrService) {
     this.baocaoForm = this._fb.group({
       // employeeId: 0,
@@ -71,6 +72,7 @@ export class DmbaocaoComponent implements OnInit {
       nguoi_sua: '',
       ngay_sua: null
     });
+    this.baocaoForm.controls['ma_baocao'].enable();
     this.trang_thai = "add";
     this.HederModal_BC = "Thêm mới báo cáo";
     this.rowSelect = -1;
@@ -78,6 +80,12 @@ export class DmbaocaoComponent implements OnInit {
     this.toggleModal();
   }
   update_bc() {
+    this.baocaoForm.controls['ma_baocao'].disable();
+    const check_mabc = this.baocaoForm.controls['ma_baocao'].value;
+    if (check_mabc === '') {
+      this.showMessage('Warning', 'Bạn chưa chọn bản ghi nào!');
+      return;
+    }
     this.trang_thai = "update";
     this.HederModal_BC = "Cập nhật báo cáo";
     this.toggleModal();
@@ -121,10 +129,19 @@ export class DmbaocaoComponent implements OnInit {
   }
   showMessage(type: string, str_thongbao: string) {
     if (type === 'Success')
-      this.toastr.success(str_thongbao, 'Thông báo');
+      this.toastr.success(str_thongbao, 'Thông báo',
+        {
+          progressBar: true
+        });
     if (type === 'Warning')
-      this.toastr.warning(str_thongbao, 'Cảnh báo');
+      this.toastr.warning(str_thongbao, 'Cảnh báo',
+        {
+          progressBar: true
+        });
     if (type === 'Error')
-      this.toastr.error(str_thongbao, 'Cảnh báo');
+      this.toastr.error(str_thongbao, 'Cảnh báo',
+        {
+          progressBar: true
+        });
   }
 }
