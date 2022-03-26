@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import * as fromDVQL from 'src/app/states/reducers/dmdvql.reducer';
 import * as fromHuyen from 'src/app/states/reducers/dmhuyen.reducer';
 import * as fromBaocao from 'src/app/states/reducers/dmbaocao.reducer';
+import * as fromAuthen from 'src/app/states/reducers/authen.reducer';
 import { DmdvqlEffect } from './states/effects/dmdvql.effect';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
@@ -17,6 +18,7 @@ import { Dmbaocaoeffect } from './states/effects/dmbaocao.effect';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { AuthenEffect } from './states/effects/authen.effect';
 
 
 @NgModule({
@@ -27,11 +29,11 @@ import { ToastrModule } from 'ngx-toastr';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({ dm_dvql: fromDVQL.dvqlReducer, dm_huyen: fromHuyen.huyenReducer, dm_baocao: fromBaocao.baocaoReducer }),
-    EffectsModule.forRoot([DmdvqlEffect, DmhuyenEffect, Dmbaocaoeffect]),
+    StoreModule.forRoot({ dm_dvql: fromDVQL.dvqlReducer, dm_huyen: fromHuyen.huyenReducer, dm_baocao: fromBaocao.baocaoReducer, au_then: fromAuthen.AuthenReducer }),
+    EffectsModule.forRoot([DmdvqlEffect, DmhuyenEffect, Dmbaocaoeffect,AuthenEffect]),
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule ,
+    ReactiveFormsModule,
     CommonModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot()

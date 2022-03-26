@@ -24,6 +24,12 @@ namespace QLDT.Controllers
             return _IDM_BAOCAOService.GetAll();
         }
         [HttpGet]
+        [Route("Filter")]
+        public IEnumerable<DM_BAOCAO> GetbyFilter(int take, int skip)
+        {
+            return _IDM_BAOCAOService.GetFilter(take, skip);
+        }
+        [HttpGet]
         [Route("{id}")]
         public DM_BAOCAO GetbyKey(int id)
         {
@@ -46,7 +52,7 @@ namespace QLDT.Controllers
             obj.noidung = dmbaocao.noidung;
             obj.banhanh = dmbaocao.banhanh;
             obj.ngay_sua = DateTime.Now;
-            obj.trang_thai = dmbaocao.trang_thai == null ? 0 : dmbaocao.trang_thai;            
+            obj.trang_thai = dmbaocao.trang_thai == null ? 0 : dmbaocao.trang_thai;
             var result = _IDM_BAOCAOService.Update(obj);
             return result;
         }
