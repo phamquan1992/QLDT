@@ -1,13 +1,14 @@
 import { Action, createReducer, createSelector, on } from "@ngrx/store";
+import { nguoidung } from "src/app/models/nguoidung";
 import * as AuthenAction from "src/app/states/actions/authen.action";
 import { AppState } from "../app.state";
 
 export interface AuthenState {
-    result: boolean,
+    result: nguoidung,
     loadding: boolean;
 }
 export const initalState = {
-    result: false,
+    result: {} as nguoidung,
     loadding: false
 }
 export const _AuthenReducer = createReducer(

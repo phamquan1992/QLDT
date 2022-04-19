@@ -1,4 +1,5 @@
 import { createAction, props } from "@ngrx/store";
+import { nguoidung } from "src/app/models/nguoidung";
 
 export enum authenActionType {
     Login_fecth = "[Authen] Login fecth",
@@ -11,7 +12,7 @@ export const FECTH_LOGIN = createAction(
 )
 export const FECTH_LOGIN_SUCCESS = createAction(
     authenActionType.Login_fecth_success,
-    props<{ result: boolean }>()
+    props<{ result: nguoidung }>()
 )
 export const FECTH_LOGIN_FAIL = createAction(
     authenActionType.Login_fecth_fail

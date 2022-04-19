@@ -16,6 +16,7 @@ namespace QLDT.Repositories.Repository
         public IDmXaRepository dmXaRepository { get; }
         public IDM_BAOCAORepository dM_BAOCAORepository { get; }
         public IUSERDATARepository uSERDATARepository { get; }
+        public INGUOIDUNGRepository nGUOIDUNGRepository { get; }
         private readonly ISessionFactory _sessionFactory;
         private readonly ITransaction _transaction;
         public ISession Session { get; private set; }
@@ -27,7 +28,8 @@ namespace QLDT.Repositories.Repository
             IDmdvqlRepository dmdvqlRepository,
             IDmtinhRepository dmtinhRepository,
             IDM_BAOCAORepository dM_BAOCAORepository,
-            IUSERDATARepository uSERDATARepository
+            IUSERDATARepository uSERDATARepository,
+            INGUOIDUNGRepository nGUOIDUNGRepository
             )
         {
             this._sessionFactory = sessionFactory;
@@ -44,6 +46,7 @@ namespace QLDT.Repositories.Repository
             this.dmtinhRepository = dmtinhRepository;
             this.dM_BAOCAORepository = dM_BAOCAORepository;
             this.uSERDATARepository = uSERDATARepository;
+            this.nGUOIDUNGRepository = nGUOIDUNGRepository;
         }
         public void Dispose()
         {

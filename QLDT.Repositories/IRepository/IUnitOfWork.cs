@@ -13,6 +13,7 @@ namespace QLDT.Repositories.IRepository
         IDmtinhRepository dmtinhRepository { get; }
         IDM_BAOCAORepository dM_BAOCAORepository { get; }
         IUSERDATARepository uSERDATARepository { get; }
+        INGUOIDUNGRepository nGUOIDUNGRepository { get; }
         void Commit();
         void Rollback();
     }

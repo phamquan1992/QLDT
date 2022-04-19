@@ -39,15 +39,15 @@ export class LoginComponent implements OnInit {
     else {
       this.store.dispatch(FECTH_LOGIN({ user_name: this.user_value.name_value, pass_word: this.user_value.pass_value }));
       this.loading$ = this.store.select(store => store.au_then.loadding);
-      setTimeout(() => {        
-        this.store.select(t => t.au_then.result).subscribe(res => {
-          console.log(res);
-          if (res)
-            this.router.navigate(['/home']);
-          else
-            this.toastr.error("Tên đăng nhập hoặc mật khẩu không đúng!", "Cảnh báo");
-        });
-      }, 1000);
+      // setTimeout(() => {        
+      //   this.store.select(t => t.au_then.result).subscribe(res => {
+      //     console.log(res);
+      //     if (res)
+      //       this.router.navigate(['/home']);
+      //     else
+      //       this.toastr.error("Tên đăng nhập hoặc mật khẩu không đúng!", "Cảnh báo");
+      //   });
+      // }, 1000);
     }
   }
 }

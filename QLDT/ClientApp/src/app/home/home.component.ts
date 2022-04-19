@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { nguoidung } from '../models/nguoidung';
+import { ObservableService } from '../services/observable.service';
 
 @Component({
   selector: 'app-home',
@@ -7,20 +10,21 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor(private router: Router) { }
+  currUser!: nguoidung;
+  constructor(private router: Router, private observableServices: ObservableService,) { }
   isShowAcountMenu = false;
   ngOnInit(): void {
+    this.observableServices.getUserInfo().subscribe(t => this.currUser = t);
   }
   istoogle: boolean = false;
   showToogle() {
     this.istoogle = !this.istoogle;
   }
-  account_click(){    
-    this.isShowAcountMenu=!this.isShowAcountMenu;
+  account_click() {
+    this.isShowAcountMenu = !this.isShowAcountMenu;
     console.log(this.isShowAcountMenu);
   }
-  logout(){
+  logout() {
     this.router.navigate(['/login']);
   }
 }

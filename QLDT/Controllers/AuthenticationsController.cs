@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using QLDT.Core.Domain;
 using QLDT.Service.IService;
 using System;
 using System.Collections.Generic;
@@ -18,10 +19,16 @@ namespace QLDT.Controllers
             this._IUSERDATAService = _IUSERDATAService;
         }
         [HttpGet]
-        [Route("Login")]
+        [Route("Login_v1")]
         public bool Login(string user, string pass)
         {
             return _IUSERDATAService.Login(user, pass);
+        }
+        [HttpGet]
+        [Route("Login")]
+        public NGUOIDUNG Login_v2(string user, string pass)
+        {
+            return _IUSERDATAService.GetUser(user, pass);
         }
     }
 }

@@ -8,12 +8,12 @@
       </a>
     </div>
     <div class="w-1/2 pr-0">
-      <div class="relative inline-block float-right w-40">
+      <div class="relative inline-block float-right" style="min-width: 160px;">
 
         <div class="relative text-sm">
-          <button id="userButton" class="flex items-center focus:outline-none mr-3" (click)="account_click()">
-            <img class="w-8 h-8 rounded-full mr-4" src="https://i.pravatar.cc/300" alt="Avatar of User"> <span
-              class="hidden md:inline-block">Hi, User </span>
+          <button id="userButton" class="flex items-center focus:outline-none mr-3 float-right" (click)="account_click()">
+            <span
+              class="hidden md:inline-block now">Hi, {{currUser.ten}}</span>
             <svg class="pl-2 h-2" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"
               xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
               <g>
@@ -23,10 +23,12 @@
             </svg>
           </button>
           <div id="userMenu"
-            class="bg-white rounded shadow-md mt-10 absolute top-0 right-0 min-w-full overflow-auto z-30"
+            class="bg-white rounded shadow-md mt-8 absolute top-0 right-0 min-w-full overflow-auto z-30"
             [ngClass]="isShowAcountMenu?'':'invisible'">
             <ul class="list-reset">
-              <li><a href="#" class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">Tài khoản của bạn</a></li>
+              <li><a href="#"
+                  class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">Tài khoản của
+                  bạn</a></li>
               <li><a href="#"
                   class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">Notifications</a>
               </li>
@@ -34,7 +36,8 @@
                 <hr class="border-t mx-2 border-gray-400">
               </li>
               <li><a (click)="logout()"
-                  class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline cursor-pointer">Đăng xuất</a>
+                  class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline cursor-pointer">Đăng
+                  xuất</a>
               </li>
             </ul>
           </div>
