@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-modal-ct',
@@ -11,7 +11,6 @@ export class ModalCTComponent implements OnInit {
   showModal = false;
   ngOnInit(): void {
   }
-  
   toggleModal(){
     this.showModal = !this.showModal;
   }

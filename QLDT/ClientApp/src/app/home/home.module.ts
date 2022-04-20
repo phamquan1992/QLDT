@@ -11,6 +11,11 @@ import { DmchitieuComponent } from './dmchitieu/dmchitieu.component';
 import { DmhopdongtcComponent } from './dmhopdongtc/dmhopdongtc.component';
 import { ModalCTComponent } from './modal-ct/modal-ct.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NhomchucnangComponent } from './nhomchucnang/nhomchucnang.component';
+import { ChucnangComponent } from './chucnang/chucnang.component';
+import { TacvuComponent } from './tacvu/tacvu.component';
+import { NhomquyenComponent } from './nhomquyen/nhomquyen.component';
+import { QlnguoidungComponent } from './qlnguoidung/qlnguoidung.component';
 
 
 @NgModule({
@@ -23,6 +28,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DmchitieuComponent,
     DmhopdongtcComponent,
     ModalCTComponent,
+    NhomchucnangComponent,
+    ChucnangComponent,
+    TacvuComponent,
+    NhomquyenComponent,
+    QlnguoidungComponent,
   ],
   imports: [
     CommonModule,

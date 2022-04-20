@@ -26,6 +26,8 @@ namespace QLDT.Extention
                .Mappings(m => m.FluentMappings.AddFromAssemblyOf<DM_BAOCAOMapping>())
                .Mappings(m => m.FluentMappings.AddFromAssemblyOf<USERDATAMapping>())
                .Mappings(m => m.FluentMappings.AddFromAssemblyOf<NGUOIDUNGMapping>())
+               .Mappings(m => m.FluentMappings.AddFromAssemblyOf<NHOMCHUCNANGMapping>())
+               .Mappings(m => m.FluentMappings.AddFromAssemblyOf<NHOMCHUCNANG_OBJECTMapping>())
                .ExposeConfiguration(cf => new SchemaUpdate(cf).Execute(false, false));
 
             var sessionFactory = configuration.BuildSessionFactory();

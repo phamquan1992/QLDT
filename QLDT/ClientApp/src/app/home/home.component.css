@@ -2,3 +2,6 @@
 #mn_content li{
     position: relative;
 }
+/* #mn_content li:active>ul{
+    display:none;
+} */

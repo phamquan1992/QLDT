@@ -13,7 +13,7 @@
         <div class="relative text-sm">
           <button id="userButton" class="flex items-center focus:outline-none mr-3 float-right" (click)="account_click()">
             <span
-              class="hidden md:inline-block now">Hi, {{currUser.ten}}</span>
+              class="hidden md:inline-block now">Xin chào, {{currUser.ten}}</span>
             <svg class="pl-2 h-2" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"
               xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
               <g>
@@ -62,14 +62,36 @@
           <a
             class="block py-1 md:py-3 pl-1 align-middle text-pink-600 no-underline hover:text-gray-900 border-b-2 border-orange-600 hover:border-orange-600">
             <i class="fas fa-home fa-fw mr-3 text-pink-600"></i><span class="pb-1 md:pb-0 text-sm">Trang chủ</span>
+          </a>          
+        </li>
+        <li class="mr-6 my-2 md:my-0">
+          <a
+            class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-purple-500">
+            <i class="fas fa-users mr-3"></i><span class="pb-1 md:pb-0 text-sm">Quản lý người dùng</span>
           </a>
+          <ul class="hidden bg-white rounded shadow-md lg:absolute  sub_menu w-full md:w-52 mr-6">            
+            <li><a routerLink="./nhom-chuc-nang"
+                class="px-4 py-2 block text-gray-900 hover:bg-gray-400 hover:text-white no-underline hover:no-underline text-sm">Quản lý nhóm chức năng
+              </a></li>
+            <li><a routerLink="./chuc-nang"
+                class="px-4 py-2 block text-gray-900 hover:bg-gray-400 hover:text-white no-underline hover:no-underline text-sm">Quản lý chức năng
+              </a></li>
+            <li><a routerLink="./tac-vu"
+                class="px-4 py-2 block text-gray-900 hover:bg-gray-400 hover:text-white no-underline hover:no-underline text-sm">Quản lý tác vụ
+              </a></li>
+            <li><a routerLink="./nhom-quyen"
+                class="px-4 py-2 block text-gray-900 hover:bg-gray-400 hover:text-white no-underline hover:no-underline text-sm">Quản lý nhóm quyền
+              </a></li>
+            <li><a routerLink="./nguoi-dung"
+                class="px-4 py-2 block text-gray-900 hover:bg-gray-400 hover:text-white no-underline hover:no-underline text-sm">Quản lý người dùng
+              </a></li>
+          </ul>
         </li>
         <li class="mr-6 my-2 md:my-0">
           <a
             class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-pink-500">
             <i class="fas fa-tasks fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">Danh mục</span></a>
-          <ul class="hidden bg-white rounded shadow-md lg:absolute  sub_menu w-full md:w-52 mr-6">
-
+          <ul class="hidden bg-white rounded shadow-md lg:absolute  sub_menu w-full md:w-52 mr-6">            
             <li><a routerLink="./bao-cao"
                 class="px-4 py-2 block text-gray-900 hover:bg-gray-400 hover:text-white no-underline hover:no-underline text-sm">Danh
                 mục báo cáo

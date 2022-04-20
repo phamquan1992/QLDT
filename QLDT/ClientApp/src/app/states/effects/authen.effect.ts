@@ -22,7 +22,7 @@ export class AuthenEffect {
                 };
                 if (loginInfo.tendangnhap != null) {
                     this._sharingService.setUserValue(loginInfo);
-                    this.router.navigate(['/home']);
+                    this.router.navigate(['/s']);
                 } else
                     this.toastr.error("Tên đăng nhập hoặc mật khẩu không đúng!", "Cảnh báo");
             }),
