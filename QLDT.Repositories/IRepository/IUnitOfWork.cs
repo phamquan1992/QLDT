@@ -16,6 +16,7 @@ namespace QLDT.Repositories.IRepository
         INGUOIDUNGRepository nGUOIDUNGRepository { get; }
         INHOMCHUCNANGRepository nHOMCHUCNANGRepository { get; }
         INHOMCHUCNANG_OBJECTRepository nHOMCHUCNANG_OBJECTRepository { get; }
+        IOBJECT_VIEWRepository oBJECT_VIEWRepository { get; }
         void Commit();
         void Rollback();
     }

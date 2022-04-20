@@ -19,6 +19,7 @@ namespace QLDT.Repositories.Repository
         public INHOMCHUCNANGRepository nHOMCHUCNANGRepository { get; }
         public INGUOIDUNGRepository nGUOIDUNGRepository { get; }
         public INHOMCHUCNANG_OBJECTRepository nHOMCHUCNANG_OBJECTRepository { get; }
+        public IOBJECT_VIEWRepository oBJECT_VIEWRepository { get; }
         private readonly ISessionFactory _sessionFactory;
         private readonly ITransaction _transaction;
         public ISession Session { get; private set; }
@@ -33,7 +34,8 @@ namespace QLDT.Repositories.Repository
             IUSERDATARepository uSERDATARepository,
             INGUOIDUNGRepository nGUOIDUNGRepository,
             INHOMCHUCNANGRepository nHOMCHUCNANGRepository,
-            INHOMCHUCNANG_OBJECTRepository nHOMCHUCNANG_OBJECTRepository
+            INHOMCHUCNANG_OBJECTRepository nHOMCHUCNANG_OBJECTRepository,
+            IOBJECT_VIEWRepository oBJECT_VIEWRepository
             )
         {
             this._sessionFactory = sessionFactory;
@@ -53,6 +55,7 @@ namespace QLDT.Repositories.Repository
             this.nGUOIDUNGRepository = nGUOIDUNGRepository;
             this.nHOMCHUCNANGRepository = nHOMCHUCNANGRepository;
             this.nHOMCHUCNANG_OBJECTRepository = nHOMCHUCNANG_OBJECTRepository;
+            this.oBJECT_VIEWRepository = oBJECT_VIEWRepository;
         }
         public void Dispose()
         {
