@@ -38,6 +38,7 @@ namespace QLDT
             services.AddScoped<INGUOIDUNGRepository, NGUOIDUNGRepository>();
             services.AddScoped<INHOMCHUCNANGRepository, NHOMCHUCNANGRepository>();
             services.AddScoped<INHOMCHUCNANG_OBJECTRepository, NHOMCHUCNANG_OBJECTRepository>();
+            services.AddScoped<IOBJECT_VIEWRepository, OBJECT_VIEWRepository>();
             #endregion
             #region Service
             services.AddScoped<IDmchucvuService, DmchucvuService>();
@@ -50,6 +51,7 @@ namespace QLDT
             services.AddScoped<INGUOIDUNGService, NGUOIDUNGService>();
             services.AddScoped<INHOMCHUCNANGService, NHOMCHUCNANGService>();
             services.AddScoped<INHOMCHUCNANG_OBJECTService, NHOMCHUCNANG_OBJECTService>();
+            services.AddScoped<IOBJECT_VIEWService, OBJECT_VIEWService>();
             #endregion
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
