@@ -14,6 +14,8 @@ namespace QLDT.Repositories.IRepository
         IDM_BAOCAORepository dM_BAOCAORepository { get; }
         IUSERDATARepository uSERDATARepository { get; }
         INGUOIDUNGRepository nGUOIDUNGRepository { get; }
+        INHOMCHUCNANGRepository nHOMCHUCNANGRepository { get; }
+        INHOMCHUCNANG_OBJECTRepository nHOMCHUCNANG_OBJECTRepository { get; }
         void Commit();
         void Rollback();
     }
