@@ -1,1 +1,48 @@
-<p>nhomchucnang works!</p>
+<div *ngIf="loading$ | async">Loadding...</div>
+<div class="relative flex flex-col min-w-0 break-words w-full mb-3 shadow-lg rounded bg-white">
+    <div class="rounded-t mb-0 px-4 py-3 border-0">
+        <div class="flex flex-wrap items-center">
+            <div class="relative w-full px-4 max-w-full flex-grow flex-1">
+                <h3 class="font-semibold text-2xl text-blueGray-700"> Nhóm chức năng </h3>
+            </div>
+        </div>
+    </div>
+    <div class="block w-full overflow-x-auto">
+        <table class="items-center w-full bg-transparent border-collapse border border-slate-200">
+            <thead>
+                <tr>
+                    <th
+                        class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r whitespace-nowrap font-semibold text-center bg-slate-50 text-slate-500 border-slate-200">
+                        STT</th>
+                    <th
+                        class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r whitespace-nowrap font-semibold text-center bg-slate-50 text-slate-500 border-slate-200">
+                        Tên nhóm chức năng</th>
+                </tr>
+
+            </thead>
+            <tbody class="flex-1 sm:flex-none">
+                <tr *ngFor="let dm of data|async;let idx = index" class="hover:bg-blue-500 hover:text-white"
+                    [class.bg-blue-500]="rowSelect===dm.nhomchucnangid"
+                    [class.text-white]="rowSelect===dm.nhomchucnangid" (click)="selectRow(dm)">
+                    <td
+                        class="border-t-0 px-6 align-middle border-l-0 border-r border-b text-xs whitespace-nowrap py-2">
+                        {{idx+1}}</td>
+                    <td
+                        class="border-t-0 px-6 align-middle border-l-0 border-r border-b text-xs whitespace-nowrap py-2">
+                        {{dm.description}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="w-80 mx-auto mt-2 mb-2">
+        <button (click)="addmew_nhomcn()"
+            class="bg-green-700 py-2 px-2 mr-1 rounded-md text-white font-bold text-[13px] font-['Roboto'] min-w-[100px]"><i
+                class="fas fa-plus mr-1"></i>Thêm mới</button>
+        <button (click)="update_nhomcn()"
+            class="bg-blue-700 py-2 px-2 rounded-md text-white font-bold text-[13px] font-['Roboto'] min-w-[100px]"><i
+                class="fas fa-pen mr-1"></i>Sửa</button>
+        <button (click)="delete_nhomcn()"
+            class="bg-red-700 py-2 px-2 ml-1 rounded-md text-white font-bold text-[13px] font-['Roboto'] min-w-[100px]"><i
+                class="fas fa-trash mr-1"></i>Xóa</button>
+    </div>
+</div>

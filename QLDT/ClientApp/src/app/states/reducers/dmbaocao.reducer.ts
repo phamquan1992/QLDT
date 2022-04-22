@@ -1,6 +1,6 @@
 import { Action, createReducer, createSelector, on } from "@ngrx/store";
 import { dm_baocao } from "src/app/models/dm_baocao";
-import * as DmbaocaoAction from "src/app/states/actions/dmbaocao.action"
+import * as DmbaocaoAction from "src/app/states/actions/dmbaocao.action";
 import { AppState } from "../app.state";
 
 export interface DmbaocaoState {
@@ -12,7 +12,7 @@ export interface DmbaocaoState {
 export const initalState = {
     list: [] as dm_baocao[],
     loadding: false,
-    obj_baocao: null as unknown as dm_baocao,
+    obj_baocao: {} as dm_baocao,
     result: ''
 }
 export const DmbaocaoReducer = createReducer(
